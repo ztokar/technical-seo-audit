@@ -7,7 +7,8 @@
 <meta name="robots" content="noindex">
 <meta name="description" content="Technical SEO audit of www.harborstreetdental.example: speed, search basics and accessibility, with the fix for each problem from Google’s own guides.">
 <style>
-:root{--paper:#f7f8fb;--card:#fdfdff;--on-ink:#f9faff;--on-ink-soft:#dbe3f5;--on-ink-meta:#b9c5dd;--chip:#e9eeff;--note-ink:#5c3600;--shadow:rgba(16,33,59,.35);--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,"Cascadia Mono",Consolas,monospace;--ink:#10213b;--soft:#44536b;--line:#dfe4ee;--blue:#2457ff;--blue-ink:#1a3fc4;--good:#0a7a45;--mid:#9a5a00;--poor:#b3261e;--good-bg:#e4f5ec;--mid-bg:#fdf0d9;--poor-bg:#fbe6e4}
+:root{--head:#10213b;--head-ink:#10213b;--paper:#f7f8fb;--card:#fdfdff;--on-ink:#f9faff;--on-ink-soft:#dbe3f5;--on-ink-meta:#b9c5dd;--chip:#e9eeff;--note-ink:#5c3600;--shadow:rgba(16,33,59,.35);--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,"Cascadia Mono",Consolas,monospace;--ink:#10213b;--soft:#44536b;--line:#dfe4ee;--blue:#2457ff;--blue-ink:#1a3fc4;--good:#0a7a45;--mid:#9a5a00;--poor:#b3261e;--good-bg:#e4f5ec;--mid-bg:#fdf0d9;--poor-bg:#fbe6e4}
+@media (prefers-color-scheme:dark){:root{--head:#070d19;--paper:#0b1220;--card:#111a2e;--ink:#e8edf8;--soft:#9fb0cc;--line:#22304d;--blue:#6f8fff;--blue-ink:#9db3ff;--chip:#1a2748;--good:#3ddc97;--mid:#f0b24a;--poor:#ff7a70;--good-bg:#0f2e23;--mid-bg:#33260d;--poor-bg:#3a1614;--note-ink:#f6d9a0;--shadow:rgba(0,0,0,.6);color-scheme:dark}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 html,body{overflow-x:clip}
@@ -15,7 +16,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--sans)
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
 h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;margin:0;text-wrap:balance}
 code{font:600 .82em/1.4 var(--mono)}
-header.top{background:var(--ink);color:var(--on-ink);padding:56px 0 64px}
+header.top{background:var(--head);color:var(--on-ink);padding:56px 0 64px}
 header.top h1{font-size:clamp(2rem,5.2vw,3.5rem);line-height:1.08;max-width:19ch}
 .site{margin:24px 0 0;font-size:1.05rem;color:var(--on-ink-soft);overflow-wrap:anywhere}
 .site b{color:var(--on-ink);font-weight:600}
@@ -65,10 +66,10 @@ td.v{text-align:right;white-space:nowrap;font-weight:700;font-variant-numeric:ta
 .bars span{font-weight:700;font-variant-numeric:tabular-nums}
 .note{background:var(--mid-bg);color:var(--note-ink);border-radius:12px;padding:16px 20px;font-size:.92rem;margin-top:16px}
 .how{color:var(--soft);font-size:.92rem;max-width:70ch}
-footer{margin-top:64px;background:var(--ink);color:var(--on-ink-soft);padding:40px 0}
+footer{margin-top:64px;background:var(--head);color:var(--on-ink-soft);padding:40px 0}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
 footer p{margin:0;max-width:52ch} footer strong{color:var(--on-ink)}
-footer a{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;background:var(--on-ink);color:var(--ink);font-weight:700;text-decoration:none}
+footer a{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;background:var(--on-ink);color:var(--head-ink);font-weight:700;text-decoration:none}
 footer a:hover{background:var(--chip)} footer a:active{transform:translateY(1px)}
 a:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 @media (max-width:860px){.dials{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}}
