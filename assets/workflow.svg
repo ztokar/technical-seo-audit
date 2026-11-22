@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="t d" font-family="Segoe UI, system-ui, -apple-system, Helvetica, Arial, sans-serif">
+  <title id="t">How the technical SEO audit works</title>
+  <desc id="d">Three steps: test the page with Google Lighthouse, match each problem to Google's Modern Web Guidance, then get one ordered fix list.</desc>
+  <rect width="1200" height="300" rx="20" fill="#f7f8fb"/>
+  <g>
+    <rect x="40" y="50" width="330" height="200" rx="16" fill="#fdfdff" stroke="#dfe4ee" stroke-width="2"/>
+    <text x="68" y="100" font-size="34" font-weight="700" fill="#2457ff" font-family="Georgia, serif">01</text>
+    <text x="68" y="146" font-size="25" font-weight="700" fill="#10213b">Test the page</text>
+    <text x="68" y="182" font-size="18" fill="#44536b">Google Lighthouse loads it as a</text>
+    <text x="68" y="208" font-size="18" fill="#44536b">phone visitor, three times.</text>
+  </g>
+  <path d="M384 150h36m0 0l-11-9m11 9l-11 9" fill="none" stroke="#2457ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="435" y="50" width="330" height="200" rx="16" fill="#fdfdff" stroke="#dfe4ee" stroke-width="2"/>
+    <text x="463" y="100" font-size="34" font-weight="700" fill="#2457ff" font-family="Georgia, serif">02</text>
+    <text x="463" y="146" font-size="25" font-weight="700" fill="#10213b">Match each problem</text>
+    <text x="463" y="182" font-size="18" fill="#44536b">A live search of Google's Modern</text>
+    <text x="463" y="208" font-size="18" fill="#44536b">Web Guidance finds the fix.</text>
+  </g>
+  <path d="M779 150h36m0 0l-11-9m11 9l-11 9" fill="none" stroke="#2457ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="830" y="50" width="330" height="200" rx="16" fill="#10213b"/>
+    <text x="858" y="100" font-size="34" font-weight="700" fill="#a9bcff" font-family="Georgia, serif">03</text>
+    <text x="858" y="146" font-size="25" font-weight="700" fill="#f9faff">One ordered fix list</text>
+    <text x="858" y="182" font-size="18" fill="#dbe3f5">What is wrong, why it matters,</text>
+    <text x="858" y="208" font-size="18" fill="#dbe3f5">and what to fix first.</text>
+  </g>
+</svg>

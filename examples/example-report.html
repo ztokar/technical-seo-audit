@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technical SEO Audit: www.harborstreetdental.example</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Technical SEO audit of www.harborstreetdental.example: speed, search basics and accessibility, with the fix for each problem from Google’s own guides.">
+<style>
+:root{--paper:#f7f8fb;--card:#fdfdff;--on-ink:#f9faff;--on-ink-soft:#dbe3f5;--on-ink-meta:#b9c5dd;--chip:#e9eeff;--note-ink:#5c3600;--shadow:rgba(16,33,59,.35);--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,"Cascadia Mono",Consolas,monospace;--ink:#10213b;--soft:#44536b;--line:#dfe4ee;--blue:#2457ff;--blue-ink:#1a3fc4;--good:#0a7a45;--mid:#9a5a00;--poor:#b3261e;--good-bg:#e4f5ec;--mid-bg:#fdf0d9;--poor-bg:#fbe6e4}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--sans);print-color-adjust:exact;-webkit-print-color-adjust:exact}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;margin:0;text-wrap:balance}
+code{font:600 .82em/1.4 var(--mono)}
+header.top{background:var(--ink);color:var(--on-ink);padding:56px 0 64px}
+header.top h1{font-size:clamp(2rem,5.2vw,3.5rem);line-height:1.08;max-width:19ch}
+.site{margin:24px 0 0;font-size:1.05rem;color:var(--on-ink-soft);overflow-wrap:anywhere}
+.site b{color:var(--on-ink);font-weight:600}
+.meta{margin:8px 0 0;font-size:.9rem;color:var(--on-ink-meta)}
+.dials{list-style:none;margin:-36px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dial{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;gap:16px;align-items:center;box-shadow:0 10px 30px -18px var(--shadow)}
+.ring{position:relative;width:84px;height:84px;flex:none}.ring svg{width:84px;height:84px;display:block}.ring b{position:absolute;inset:0;display:grid;place-items:center;font:700 1.5rem/1 var(--sans);color:var(--ink);font-variant-numeric:tabular-nums}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.dial .track{fill:none;stroke:var(--line);stroke-width:10}
+.dial .arc{fill:none;stroke-width:10;stroke-linecap:round}
+.dial strong{display:block;font-size:1.02rem}
+.dial div>span{display:block;font-size:.84rem;color:var(--soft);line-height:1.35}
+.dial em{display:inline-block;margin-top:8px;font-style:normal;font-weight:700;font-size:.78rem;padding:2px 9px;border-radius:99px}
+.good .arc{stroke:var(--good)} .mid .arc{stroke:var(--mid)} .poor .arc{stroke:var(--poor)} .na .arc{stroke:var(--line)}
+.good em,.good.pill{background:var(--good-bg);color:var(--good)} .mid em,.mid.pill{background:var(--mid-bg);color:var(--mid)} .poor em,.poor.pill{background:var(--poor-bg);color:var(--poor)} .na em,.na.pill{background:var(--line);color:var(--soft)}
+section{padding:56px 0 0}
+section>h2{font-size:clamp(1.5rem,3.2vw,2.1rem);margin-bottom:6px}
+.lede{color:var(--soft);margin:0 0 24px;max-width:62ch}
+.findings{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.finding{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;display:grid;grid-template-columns:56px 1fr;gap:8px 18px}
+.num{font:600 2rem/1 var(--serif);color:var(--blue);font-variant-numeric:tabular-nums}
+.finding h3{font-size:1.25rem;line-height:1.3;margin:8px 0 6px}
+.tags{margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.76rem;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--chip);color:var(--blue-ink)}
+.chip.save{background:var(--good-bg);color:var(--good)} .chip.quiet{background:var(--paper);color:var(--soft);border:1px solid var(--line)}
+.why{margin:0;color:var(--soft)}
+.lh-name{margin:0 0 4px;font-size:.84rem;color:var(--soft)}
+details{margin-top:10px;font-size:.9rem} summary{cursor:pointer;color:var(--blue-ink);font-weight:600;padding:6px 0}
+.examples{margin:8px 0 0;padding-left:20px;color:var(--soft);overflow-wrap:anywhere;font:500 .84rem/1.5 var(--mono)}
+.fix{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+.fix-h{margin:0 0 4px;font-size:.84rem;font-weight:700;color:var(--blue-ink)}
+.fix ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.fix li{display:grid;gap:2px} .fix code{color:var(--ink)} .fix span{font-size:.9rem;color:var(--soft)}
+.more{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 24px;margin-top:16px}.more ul{margin:4px 0 12px;padding-left:20px;color:var(--soft)}.more li{margin:4px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.panel h3{font-size:1.15rem;margin-bottom:12px}
+table{width:100%;border-collapse:collapse;font-size:.95rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:12px 0;border-top:1px solid var(--line);vertical-align:top}
+tr:first-child th,tr:first-child td{border-top:0}
+th{font-weight:600} th small{display:block;font-weight:400;color:var(--soft);font-size:.8rem;line-height:1.35}
+td.v{text-align:right;white-space:nowrap;font-weight:700;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:99px;margin-left:8px}
+.bars{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.bars li{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:.95rem}
+.bars i{grid-column:1/-1;height:8px;border-radius:99px;background:var(--line);overflow:hidden;display:block}
+.bars i b{display:block;height:100%;background:var(--blue);border-radius:99px}
+.bars span{font-weight:700;font-variant-numeric:tabular-nums}
+.note{background:var(--mid-bg);color:var(--note-ink);border-radius:12px;padding:16px 20px;font-size:.92rem;margin-top:16px}
+.how{color:var(--soft);font-size:.92rem;max-width:70ch}
+footer{margin-top:64px;background:var(--ink);color:var(--on-ink-soft);padding:40px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
+footer p{margin:0;max-width:52ch} footer strong{color:var(--on-ink)}
+footer a{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;background:var(--on-ink);color:var(--ink);font-weight:700;text-decoration:none}
+footer a:hover{background:var(--chip)} footer a:active{transform:translateY(1px)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@media (max-width:860px){.dials{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}}
+@media (max-width:520px){body{font-size:16px}.wrap{padding:0 16px}.dials{grid-template-columns:1fr}.finding{grid-template-columns:1fr;padding:20px}.num{font-size:1.5rem}header.top{padding:40px 0 56px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <h1>Slower than Google wants. 7 fixes.</h1>
+  <p class="site"><b>https://www.harborstreetdental.example/</b></p>
+  <p class="meta">Technical SEO audit. Tested as a phone visitor on November 22, 2026. Measured 3 times, middle result shown.</p>
+</div></header>
+<main class="wrap">
+  <ul class="dials"><li class="dial mid">
+  <div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true">
+    <circle class="track" cx="60" cy="60" r="52"/>
+    <circle class="arc" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="124.2" transform="rotate(-90 60 60)"/>
+  </svg><b>62<span class="sr"> out of 100</span></b></div>
+  <div><strong>Speed</strong><span>How fast the page loads and responds</span><em>Needs work</em></div>
+</li><li class="dial good">
+  <div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true">
+    <circle class="track" cx="60" cy="60" r="52"/>
+    <circle class="arc" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="0.0" transform="rotate(-90 60 60)"/>
+  </svg><b>100<span class="sr"> out of 100</span></b></div>
+  <div><strong>Search basics</strong><span>Can Google read and list the page</span><em>Good</em></div>
+</li><li class="dial good">
+  <div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true">
+    <circle class="track" cx="60" cy="60" r="52"/>
+    <circle class="arc" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="13.1" transform="rotate(-90 60 60)"/>
+  </svg><b>96<span class="sr"> out of 100</span></b></div>
+  <div><strong>Accessibility</strong><span>Can everyone use the page</span><em>Good</em></div>
+</li><li class="dial mid">
+  <div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true">
+    <circle class="track" cx="60" cy="60" r="52"/>
+    <circle class="arc" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="75.1" transform="rotate(-90 60 60)"/>
+  </svg><b>77<span class="sr"> out of 100</span></b></div>
+  <div><strong>Good practice</strong><span>Security and browser hygiene</span><em>Needs work</em></div>
+</li></ul>
+
+  <section>
+    <h2>What to fix, in order</h2>
+    <p class="lede">Each problem was found by Google Lighthouse. Under each one is the matching guide from Google’s Modern Web Guidance, so the fix comes from the same people who run the test.</p>
+    <ol class="findings"><li class="finding">
+  <div class="num" aria-hidden="true">01</div>
+  <div class="body">
+    <p class="tags"><span class="chip">Speed</span><span class="chip save">Could save about 2.9 s</span><span class="chip quiet">3 outside scripts, 458 KiB</span></p>
+    <h3>Outside scripts slow the page down</h3>
+    <p class="lh-name">Lighthouse calls this: 3rd parties</p>
+    <p class="why">3rd party code can significantly impact load performance.</p>
+    <details><summary>Where it happens</summary><ul class="examples"><li>https://www.googletagmanager.com/gtag/js?id=AW-000000000</li><li>https://connect.facebook.net/en_US/fbevents.js</li><li>https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX</li></ul></details>
+    <div class="fix"><p class="fix-h">Google’s guide for the fix</p><ul><li><code>optimize-script-priority</code><span>Optimize the loading priority of scripts so critical code runs first and non-critical code does not delay the page.</span></li></ul></div>
+  </div>
+</li><li class="finding">
+  <div class="num" aria-hidden="true">02</div>
+  <div class="body">
+    <p class="tags"><span class="chip">Speed</span><span class="chip save">Could save about 0.6 s</span><span class="chip quiet">fetchpriority=high not applied</span></p>
+    <h3>The main image is not loaded first</h3>
+    <p class="lh-name">Lighthouse calls this: LCP request discovery</p>
+    <p class="why">Optimize LCP by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loading.</p>
+    <details><summary>Where it happens</summary><ul class="examples"><li>&lt;img alt=&quot;The Harbor Street Dental front desk&quot; class=&quot;hero-photo&quot;&gt;</li></ul></details>
+    <div class="fix"><p class="fix-h">Google’s guide for the fix</p><ul><li><code>optimize-image-priority</code><span>Optimize the loading priority of Largest Contentful Paint (LCP) candidate images and deprioritize non-critical images to reduce critical resource load delays.</span></li></ul></div>
+  </div>
+</li><li class="finding">
+  <div class="num" aria-hidden="true">03</div>
+  <div class="body">
+    <p class="tags"><span class="chip">Speed</span><span class="chip save">Could save about 0.5 s</span><span class="chip quiet">Est savings of 205 KiB</span></p>
+    <h3>Scripts load code the page never uses</h3>
+    <p class="lh-name">Lighthouse calls this: Reduce unused JavaScript</p>
+    <p class="why">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity.</p>
+    <details><summary>Where it happens</summary><ul class="examples"><li>https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX</li><li>https://connect.facebook.net/en_US/fbevents.js</li></ul></details>
+    <div class="fix"><p class="fix-h">Google’s guide for the fix</p><ul><li><code>identify-heavy-scripts</code><span>Identify the scripts that cost the most loading and main-thread time so they can be removed, deferred or replaced.</span></li></ul></div>
+  </div>
+</li><li class="finding">
+  <div class="num" aria-hidden="true">04</div>
+  <div class="body">
+    <p class="tags"><span class="chip">Speed</span><span class="chip save">Could save about 0.3 s</span><span class="chip quiet">Est savings of 66 KiB</span></p>
+    <h3>Images are heavier than they need to be</h3>
+    <p class="lh-name">Lighthouse calls this: Improve image delivery</p>
+    <p class="why">Reducing the download time of images can improve the perceived load time of the page and LCP.</p>
+    <details><summary>Where it happens</summary><ul class="examples"><li>/images/hero-front-desk.jpg</li></ul></details>
+    <div class="fix"><p class="fix-h">Google’s guide for the fix</p><ul><li><code>deliver-optimized-decorative-images</code><span>Deliver optimized images in modern formats and at several pixel densities so the browser can pick the best file for the device.</span></li></ul></div>
+  </div>
+</li><li class="finding">
+  <div class="num" aria-hidden="true">05</div>
+  <div class="body">
+    <p class="tags"><span class="chip">Speed</span><span class="chip save">Could save about 0.2 s</span><span class="chip quiet">2 fonts in TTF format</span></p>
+    <h3>Text waits for fonts before it shows</h3>
+    <p class="lh-name">Lighthouse calls this: Font display</p>
+    <p class="why">Consider setting font-display to swap or optional to ensure text is consistently visible.</p>
+    <details><summary>Where it happens</summary><ul class="examples"><li>/fonts/brand-serif-400.ttf</li><li>/fonts/brand-sans-400.ttf</li></ul></details>
+    <div class="fix"><p class="fix-h">Google’s guide for the fix</p><ul><li><code>visually-stable-font-fallbacks</code><span>Load web fonts without layout shift by matching the fallback font&#39;s metrics to the web font.</span></li></ul></div>
+  </div>
+</li><li class="finding">
+  <div class="num" aria-hidden="true">06</div>
+  <div class="body">
+    <p class="tags"><span class="chip">Speed</span><span class="chip quiet">Est savings of 118 KiB</span></p>
+    <h3>Returning visitors re-download the same files</h3>
+    <p class="lh-name">Lighthouse calls this: Use efficient cache lifetimes</p>
+    <p class="why">A long cache lifetime can speed up repeat visits to your page.</p>
+    <details><summary>Where it happens</summary><ul class="examples"><li>https://connect.facebook.net/en_US/fbevents.js</li></ul></details>
+    <div class="fix"><p class="fix-h">Google’s guide for the fix</p><ul><li><code>performance</code><span>Actionable guidelines for optimizing modern web applications. Use this guide when auditing performance and optimizing Core Web Vitals (LCP, INP, CLS).</span></li></ul></div>
+  </div>
+</li><li class="finding">
+  <div class="num" aria-hidden="true">07</div>
+  <div class="body">
+    <p class="tags"><span class="chip">Accessibility</span></p>
+    <h3>Some text is hard to read against its background</h3>
+    <p class="lh-name">Lighthouse calls this: Background and foreground colors do not have a sufficient contrast ratio.</p>
+    <p class="why">Low-contrast text is difficult or impossible for many users to read.</p>
+    <details><summary>Where it happens</summary><ul class="examples"><li>&lt;p class=&quot;insurance-note&quot;&gt;</li></ul></details>
+    <div class="fix"><p class="fix-h">Google’s guide for the fix</p><ul><li><code>contrast-color</code><span>Pick a text color that stays readable against any background color.</span></li></ul></div>
+  </div>
+</li></ol>
+  </section>
+
+  <section>
+    <h2>The numbers behind the score</h2>
+    <p class="lede">Lab numbers from this test.</p>
+    <div class="two">
+      <div class="panel"><h3>This test</h3><table><tr><th>Main content appears<small>Largest Contentful Paint. Google&#39;s line for good is 2.5 seconds.</small></th><td class="v">8.6 s<span class="pill poor">Poor</span></td></tr><tr><th>Page is busy and cannot respond<small>Total Blocking Time. Under 200 ms is good.</small></th><td class="v">170 ms<span class="pill good">Good</span></td></tr><tr><th>Layout jumps while loading<small>Cumulative Layout Shift. Under 0.1 is good.</small></th><td class="v">0<span class="pill good">Good</span></td></tr><tr><th>First thing appears<small>First Contentful Paint. Under 1.8 seconds is good.</small></th><td class="v">3.3 s<span class="pill poor">Poor</span></td></tr><tr><th>Page looks complete<small>Speed Index. Under 3.4 seconds is good.</small></th><td class="v">6.1 s<span class="pill poor">Poor</span></td></tr></table></div>
+      <div class="panel"><h3>Outside scripts on this page</h3><ul class="bars"><li>Google Analytics<span>198 KB</span><i><b style="width:100%"></b></i></li><li>Google Ads<span>157 KB</span><i><b style="width:79%"></b></i></li><li>Facebook<span>103 KB</span><i><b style="width:52%"></b></i></li></ul></div>
+    </div>
+    
+    
+  </section>
+
+  <section>
+    <h2>How this was measured</h2>
+    <p class="how">Measured with Google Lighthouse 13.6.0 from Google’s PageSpeed servers. Speed scores on separate runs were 58, 62, 64. Fix guidance comes from Google’s Modern Web Guidance 1.0.1. Both tools are fetched fresh on every run, so this audit follows Google’s own updates. A lab test is one visit on one connection. It does not replace Search Console or real-visitor data.</p>
+  </section>
+</main>
+<footer><div class="wrap">
+  <p><strong>Want these fixed for you?</strong> This audit is free and open source, built by Zechariah Tokar, an independent SEO consultant.</p>
+  <a href="https://israelseofreelancer.com/">Work with Zechariah</a>
+</div></footer>
+</body>
+</html>

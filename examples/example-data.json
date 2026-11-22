@@ -1,0 +1,76 @@
+{
+  "url": "https://www.harborstreetdental.example/",
+  "strategy": "mobile",
+  "source": "pagespeed",
+  "spread": [58, 62, 64],
+  "measuredAt": "2026-11-22T10:00:00.000Z",
+  "lighthouseVersion": "13.6.0",
+  "guidanceVersion": "1.0.1",
+  "scores": { "performance": 62, "accessibility": 96, "best-practices": 77, "seo": 100 },
+  "metrics": [
+    { "id": "largest-contentful-paint", "label": "Main content appears", "note": "Largest Contentful Paint. Google's line for good is 2.5 seconds.", "value": "8.6 s", "score": 0.01 },
+    { "id": "total-blocking-time", "label": "Page is busy and cannot respond", "note": "Total Blocking Time. Under 200 ms is good.", "value": "170 ms", "score": 0.92 },
+    { "id": "cumulative-layout-shift", "label": "Layout jumps while loading", "note": "Cumulative Layout Shift. Under 0.1 is good.", "value": "0", "score": 1 },
+    { "id": "first-contentful-paint", "label": "First thing appears", "note": "First Contentful Paint. Under 1.8 seconds is good.", "value": "3.3 s", "score": 0.4 },
+    { "id": "speed-index", "label": "Page looks complete", "note": "Speed Index. Under 3.4 seconds is good.", "value": "6.1 s", "score": 0.44 }
+  ],
+  "findings": [
+    {
+      "id": "third-parties-insight", "category": "performance", "title": "3rd parties",
+      "description": "3rd party code can significantly impact load performance. Reduce and defer loading of 3rd party code to prioritize your page's content.",
+      "detail": "3 outside scripts, 458 KiB", "score": 0, "savingMs": 2900,
+      "examples": ["https://www.googletagmanager.com/gtag/js?id=AW-000000000", "https://connect.facebook.net/en_US/fbevents.js", "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"],
+      "guides": [{ "id": "optimize-script-priority", "description": "Optimize the loading priority of scripts so critical code runs first and non-critical code does not delay the page." }]
+    },
+    {
+      "id": "lcp-discovery-insight", "category": "performance", "title": "LCP request discovery",
+      "description": "Optimize LCP by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loading.",
+      "detail": "fetchpriority=high not applied", "score": 0, "savingMs": 600,
+      "examples": ["<img alt=\"The Harbor Street Dental front desk\" class=\"hero-photo\">"],
+      "guides": [{ "id": "optimize-image-priority", "description": "Optimize the loading priority of Largest Contentful Paint (LCP) candidate images and deprioritize non-critical images to reduce critical resource load delays." }]
+    },
+    {
+      "id": "unused-javascript", "category": "performance", "title": "Reduce unused JavaScript",
+      "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity.",
+      "detail": "Est savings of 205 KiB", "score": 0, "savingMs": 450,
+      "examples": ["https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX", "https://connect.facebook.net/en_US/fbevents.js"],
+      "guides": [{ "id": "identify-heavy-scripts", "description": "Identify the scripts that cost the most loading and main-thread time so they can be removed, deferred or replaced." }]
+    },
+    {
+      "id": "image-delivery-insight", "category": "performance", "title": "Improve image delivery",
+      "description": "Reducing the download time of images can improve the perceived load time of the page and LCP.",
+      "detail": "Est savings of 66 KiB", "score": 0, "savingMs": 300,
+      "examples": ["/images/hero-front-desk.jpg"],
+      "guides": [{ "id": "deliver-optimized-decorative-images", "description": "Deliver optimized images in modern formats and at several pixel densities so the browser can pick the best file for the device." }]
+    },
+    {
+      "id": "font-display-insight", "category": "performance", "title": "Font display",
+      "description": "Consider setting font-display to swap or optional to ensure text is consistently visible.",
+      "detail": "2 fonts in TTF format", "score": 0.5, "savingMs": 160,
+      "examples": ["/fonts/brand-serif-400.ttf", "/fonts/brand-sans-400.ttf"],
+      "guides": [{ "id": "visually-stable-font-fallbacks", "description": "Load web fonts without layout shift by matching the fallback font's metrics to the web font." }]
+    },
+    {
+      "id": "cache-insight", "category": "performance", "title": "Use efficient cache lifetimes",
+      "description": "A long cache lifetime can speed up repeat visits to your page.",
+      "detail": "Est savings of 118 KiB", "score": 0.5, "savingMs": 0,
+      "examples": ["https://connect.facebook.net/en_US/fbevents.js"],
+      "guides": [{ "id": "performance", "description": "Actionable guidelines for optimizing modern web applications. Use this guide when auditing performance and optimizing Core Web Vitals (LCP, INP, CLS)." }]
+    },
+    {
+      "id": "color-contrast", "category": "accessibility", "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+      "description": "Low-contrast text is difficult or impossible for many users to read.",
+      "detail": "", "score": 0, "savingMs": 0,
+      "examples": ["<p class=\"insurance-note\">"],
+      "guides": [{ "id": "contrast-color", "description": "Pick a text color that stays readable against any background color." }]
+    }
+  ],
+  "thirdParties": [
+    { "name": "Google Analytics", "kb": 198, "busyMs": 310 },
+    { "name": "Google Ads", "kb": 157, "busyMs": 240 },
+    { "name": "Facebook", "kb": 103, "busyMs": 190 }
+  ],
+  "totalKb": 1167,
+  "realVisitors": null,
+  "warnings": []
+}
